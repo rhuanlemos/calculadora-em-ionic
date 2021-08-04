@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Calculadora Bacanuda
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,7 +14,67 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <p id="mostraValor"> {{memoria}} {{operacao}}</p>
+    <h1 id="mostraValor">{{valor}}</h1>
+    <ion-button size="small" color="medium" expand="block" (click)="apagar()">Apagar</ion-button>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button size="large" color="light" expand="block" (click)="ckNumero('7')">7</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button size="large" color="light" expand="block" (click)="ckNumero('8')">8</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button size="large" color="light" expand="block" (click)="ckNumero('9')">9</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button size="large" color="medium" expand="block" (click)="ckCalculo('/')">/</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button size="large" color="light" expand="block" (click)="ckNumero('4')">4</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button size="large" color="light" expand="block" (click)="ckNumero('5')">5</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button size="large" color="light" expand="block" (click)="ckNumero('6')">6</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button size="large" color="medium" expand="block" (click)="ckCalculo('*')">*</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button size="large" color="light" expand="block" (click)="ckNumero('1')">1</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button size="large" color="light" expand="block" (click)="ckNumero('2')">2</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button size="large" color="light" expand="block" (click)="ckNumero('3')">3</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button size="large" color="medium" expand="block" (click)="ckCalculo('-')">-</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button size="large" color="light" expand="block" (click)="ckNumero('0')">0</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button size="large" color="light" expand="block" (click)="ckPonto('.')">,</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button size="large" color="success" expand="block" (click)="ckCalculo('=')">=</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button size="large" color="medium" expand="block" (click)="ckCalculo('+')">+</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-button size="medium" color="medium" expand="block" (click)="limpar()">Limpar</ion-button>
   </div>
 </ion-content>

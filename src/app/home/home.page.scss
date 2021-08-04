@@ -25,3 +25,17 @@
 #container a {
   text-decoration: none;
 }
+
+#container b{
+  text-align: right;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+
+#mostraValor{
+  text-align: right;
+  
+}
